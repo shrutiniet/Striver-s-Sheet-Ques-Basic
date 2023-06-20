@@ -1,0 +1,54 @@
+** Approach 1**----> check from 1 to n, if flag==2 no. is prime
+
+package DSA;
+import java.util.*;
+public class Prime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int flag=1;
+		for(int i=2;i<=n;i++)
+		{
+			if(n%i==0)
+				flag++;
+		}
+		if(flag==2)
+		{
+			System.out.println("Prime");
+		}
+		else
+			System.out.println("Not Prime");
+	}
+}
+
+
+Complexity: O(n)
+
+
+**Approach 2**-----> from 2 to check till sqrt(n)
+
+package DSA;
+import java.util.*;
+public class Prime2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int flag=1;
+		for(int i=2;i<=(int)Math.sqrt(n);i++)
+		{
+			if(n%i==0)
+				flag++;
+		}
+		if(flag==1)
+			System.out.println("Prime");
+		else
+			System.out.println("Not Prime");
+	}
+}
+
+
+Complexity: O(√n)
