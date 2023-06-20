@@ -1,0 +1,32 @@
+package DSA;
+import java.util.*;
+public class armstrong_number {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int val=n;
+		int dig=0;
+		int sum1=n;
+		int sum2=0;
+		while(n>0)
+		{
+			dig++;
+			n/=10;
+		}
+		val=sum1;
+		while(sum1>0)
+		{
+			sum2+=Math.pow(sum1%10, dig);
+			sum1/=10;
+		}
+		if(val==sum2)
+		{
+			System.out.println("Armstrong");
+		}
+		else
+			System.out.println("Not Armstrong");
+	}
+
+}
